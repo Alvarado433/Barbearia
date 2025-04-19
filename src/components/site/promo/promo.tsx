@@ -18,7 +18,7 @@ const Promo = () => {
                 {/* Promo 1 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 1" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 1" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Corte e Barba Completo</h5>
                       <p className="card-text">Aproveite nossa promoção exclusiva: Corte de cabelo + Barba por um preço especial!</p>
@@ -33,7 +33,7 @@ const Promo = () => {
                 {/* Promo 2 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 2" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 2" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Desconto para Novos Clientes</h5>
                       <p className="card-text">Primeira visita? Ganhe 20% de desconto em todos os serviços!</p>
@@ -48,7 +48,7 @@ const Promo = () => {
                 {/* Promo 3 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 3" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 3" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Pacote VIP</h5>
                       <p className="card-text">Aproveite nosso pacote VIP para serviços mensais com preços exclusivos.</p>
@@ -70,7 +70,7 @@ const Promo = () => {
                 {/* Promo 4 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 4" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 4" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Corte Estilo</h5>
                       <p className="card-text">Experimente novos estilos de cortes com um preço super acessível!</p>
@@ -85,7 +85,7 @@ const Promo = () => {
                 {/* Promo 5 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 5" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 5" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Hidratação Completa</h5>
                       <p className="card-text">Pacote de hidratação para cabelos e barba para revitalizar seu visual!</p>
@@ -100,7 +100,7 @@ const Promo = () => {
                 {/* Promo 6 */}
                 <div className="col-md-4 mb-4">
                   <div className="card shadow-sm border-0 rounded">
-                    <Image src="https://via.placeholder.com/400x250.png" alt="Promoção 6" width={400} height={250} className="card-img-top" />
+                    <Image src="https://placehold.co/100x100" alt="Promoção 6" width={400} height={250} className="card-img-top" />
                     <div className="card-body">
                       <h5 className="card-title">Promoção Pacote Completo</h5>
                       <p className="card-text">Corte + Barba + Hidratação com desconto especial para clientes fidelizados!</p>
