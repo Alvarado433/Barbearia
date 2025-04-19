@@ -8,9 +8,9 @@ const Banner = () => {
       <div className="conteudo-banner">
         <h1>Onde seu estilo encontra atitude</h1>
         <p>Cortes modernos, barbas alinhadas e um ambiente feito pra você</p>
-        <a href="#servicos" className="btn-banner">
+        <Link href="#servicos" className="btn-banner">
           Conheça nossos serviços
-        </a>
+        </Link>
       </div>
     </section>
   );
