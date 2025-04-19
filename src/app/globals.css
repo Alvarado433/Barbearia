@@ -38,40 +38,42 @@ body {
   height: auto;
 }
 
-/* Menu de navegação */
-.menu-topo {
-  flex-grow: 1;
+.topo {
+  background-color: #222;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.menu-topo ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Menu Desktop */
+.menu-desktop {
   display: flex;
-  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-.menu-topo ul li {
-  margin: 0 20px;
-}
-
-.menu-topo ul li a {
+.menu-desktop li a {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
-.menu-topo ul li a:hover {
-  color: #ff7f50; /* Cor ao passar o mouse */
+.menu-desktop li a:hover {
+  color: #ff7f50;
 }
 
-/* Botão de agendamento */
-.button {
-  margin-left: 20px;
-}
-
-.button .btn {
+/* Botão Agendamento */
+.button-agendamento button {
   background-color: #ff7f50;
   color: white;
   border: none;
@@ -79,92 +81,96 @@ body {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   transition: background-color 0.3s ease;
 }
 
-.button .btn:hover {
-  background-color: #ff4500; /* Cor do botão ao passar o mouse */
+.button-agendamento button:hover {
+  background-color: #ff4500;
 }
 
-/* Menu hambúrguer para dispositivos móveis */
-.menu-hamburguer {
-  display: none; /* Inicialmente oculto */
+/* Ícone Hamburguer */
+.hamburguer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.navbar-toggler {
-  background-color: transparent;
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-color: white;
-  width: 30px;
+.hamburguer span {
+  width: 25px;
   height: 3px;
+  background: white;
+  margin: 4px 0;
   display: block;
-  margin: 6px auto;
 }
 
-/* Navbar expandida para dispositivos maiores */
-.navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
+/* Menu Mobile */
+.menu-mobile {
+  background-color: #333;
+  padding: 20px;
+  z-index: 999;
 }
 
-.navbar-nav {
+.menu-mobile ul {
   list-style: none;
-  display: flex;
+  padding: 0;
   margin: 0;
 }
 
-.navbar-nav .nav-item {
-  margin-left: 20px;
+.menu-mobile li {
+  margin: 10px 0;
 }
 
-.navbar-nav .nav-link {
+.menu-mobile a,
+.menu-mobile button {
   color: white;
   text-decoration: none;
   font-size: 16px;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
   transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ff7f50; /* Cor ao passar o mouse */
+.menu-mobile a:hover,
+.menu-mobile button:hover {
+  color: #ff7f50;
 }
 
-/* Responsividade: Menu hambúrguer para dispositivos menores */
-@media (max-width: 767px) {
-  .menu-hamburguer {
-    display: block;
-  }
-
-  .menu-topo ul {
-    display: none; /* Oculta o menu normal */
-  }
-
-  .navbar-toggler {
-    display: block;
-  }
-
-  .navbar-collapse {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    z-index: 999;
-    padding: 10px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 10px 0;
-  }
+/* Mensagem de alerta */
+.alert-info {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1000;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .hamburguer {
+    display: flex;
+  }
+
+  .button-agendamento {
+    display: none;
+  }
+}
 
 /* Banner */
 
