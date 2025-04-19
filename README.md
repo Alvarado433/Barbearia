@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 🚀 Projeto Criado com React + Next.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto desenvolvido como parte do aprendizado em React e Next.js, **sem uso do ChatGPT**, seguindo aulas disponíveis no YouTube. A ideia é aplicar os conhecimentos adquiridos e construir uma base sólida com React e o framework Next.js.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠️ Tecnologias Usadas no Projeto
 
-### `npm start`
+- [Next.js](https://nextjs.org/) – Framework React para aplicações web modernas
+- [React](https://reactjs.org/) – Biblioteca JavaScript para construção de interfaces
+- [Bootstrap 5](https://getbootstrap.com/) – Framework de CSS para layout responsivo
+- [Bootstrap Icons](https://icons.getbootstrap.com/) – Ícones oficiais do Bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Como Baixar as Bibliotecas do Bootstrap e Bootstrap Icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para instalar o **Bootstrap** e **Bootstrap Icons** via npm, execute os seguintes comandos:
 
-### `npm test`
+### 1. **Instalar o Bootstrap:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install bootstrap
+```
 
-### `npm run build`
+### 2. **Instalar o Bootstrap-icons:**
+```bash
+npm install bootstrap-icons
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Logo em seguida exporta no layout.tsx
+![layout](image-1.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Como criar um projeto em React (Next.js)
 
-### `npm run eject`
+Para criar este projeto, segui a documentação oficial do Next.js:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📄 [Documentação: Create Next App](https://nextjs.org/docs/app/api-reference/cli/create-next-app)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Comando usado:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npx create-next-app@latest
+```
+O projeto foi criado no mesmo diretório em que já existia o projeto app-react.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ▶️ para começar:
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para começar, basta rodar o servidor de desenvolvimento com um dos seguintes comandos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+# ou
+bun dev
+```
 
-### Code Splitting
+Logo apos abrir o link [http://localhost:3000](http://localhost:3000) em seu navegador para ver o resultado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+e nele vai abrir a seguinte tela:
 
-### Analyzing the Bundle Size
+![next](image.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ele vai pedir para começar a editar o page.tsx
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

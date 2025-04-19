@@ -1,0 +1,597 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color: #fff;
+  --cor-azul: #2196f3;
+  --cor-azul-claro: #e3f2fd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+/* CSS do header */
+/* Estilos gerais para o header */
+.topo {
+  background-color: #333; /* Cor de fundo do topo */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Garante que o topo fique acima de outros elementos */
+}
+
+/* Logotipo */
+.topo-logotipo img {
+  max-width: 62%;
+  height: auto;
+}
+
+/* Menu de navegação */
+.menu-topo {
+  flex-grow: 1;
+}
+
+.menu-topo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-topo ul li {
+  margin: 0 20px;
+}
+
+.menu-topo ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu-topo ul li a:hover {
+  color: #ff7f50; /* Cor ao passar o mouse */
+}
+
+/* Botão de agendamento */
+.button {
+  margin-left: 20px;
+}
+
+.button .btn {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button .btn:hover {
+  background-color: #ff4500; /* Cor do botão ao passar o mouse */
+}
+
+/* Menu hambúrguer para dispositivos móveis */
+.menu-hamburguer {
+  display: none; /* Inicialmente oculto */
+}
+
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 6px auto;
+}
+
+/* Navbar expandida para dispositivos maiores */
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff7f50; /* Cor ao passar o mouse */
+}
+
+/* Responsividade: Menu hambúrguer para dispositivos menores */
+@media (max-width: 767px) {
+  .menu-hamburguer {
+    display: block;
+  }
+
+  .menu-topo ul {
+    display: none; /* Oculta o menu normal */
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 999;
+    padding: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+
+/* Banner */
+
+.banner-salao {
+  background-image: url("../../public/img/logotipo2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 94px 14px;
+  text-align: center;
+  color: white;
+  position: relative;
+  height: 203vh;
+}
+
+/* Overlay para melhorar a legibilidade do texto */
+.banner-salao .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Cor semi-transparente */
+  z-index: 1;
+}
+
+/* Conteúdo do banner (texto e botão) */
+.conteudo-banner {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 107px;
+  margin-top: 245px;
+}
+.conteudo-banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.conteudo-banner p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-banner {
+  background-color: #ff7f50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #ff4500; /* Cor do botão ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .conteudo-banner h1 {
+    font-size: 2.5rem; /* Ajuste do tamanho do título */
+  }
+
+  .conteudo-banner p {
+    font-size: 1rem; /* Ajuste do tamanho do parágrafo */
+  }
+
+  .btn-banner {
+    padding: 10px 20px; /* Ajuste do tamanho do botão */
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+  }
+}
+
+/* Seção Sobre Nós */
+.sobrenos {
+  padding: 80px 20px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.sobrenos h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+/* Efeito no título */
+.titulo-efeito {
+  font-family: "Great Vibes", cursive;
+  color: var(--cor-menu);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subirFade 1.5s ease forwards;
+}
+
+/* Animação de entrada */
+@keyframes subirFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Conteúdo da seção */
+.conteudo-sobrenos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.texto p {
+  margin-bottom: 20px;
+}
+
+.imagem {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imagem img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para os cards de serviço */
+.servicos {
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.titulo-servicos {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e4b14d;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.cards-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.card-servico {
+  background-color: #2d2d2d;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.card-servico:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  border-color: #e4b14d;
+}
+
+.card-servico a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-servico img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #e4b14d;
+  transition: transform 0.3s ease;
+}
+
+.card-servico:hover img {
+  transform: scale(1.05);
+}
+
+.card-servico h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #e4b14d;
+  font-weight: 600;
+}
+
+.card-servico p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+
+.promocoes {
+  background-color: #333333; /* Cor de fundo escura para destacar */
+  color: #fff; /* Cor do texto branca para contraste */
+  padding: 50px 0;
+}
+
+.titulo-efeito {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #141212;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subirFade 1.5s ease forwards;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@keyframes subirFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.titulo-efeito::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.titulo-efeito:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Contagem regressiva */
+#countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff; /* Cor branca para destacar */
+  margin-top: 30px;
+}
+
+#countdown span {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#countdown span#days,
+#countdown span#hours,
+#countdown span#minutes,
+#countdown span#seconds {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e60000; /* Cor vermelha para destacar */
+}
+
+/* Texto "Oferta por tempo limitado!" */
+#countdown h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black; /* Cor laranja para destacar o texto */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+  .card-img-top {
+    height: 200px;
+  }
+
+  .promocoes {
+    padding: 30px 10px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  #countdown {
+    font-size: 1.5rem;
+  }
+
+  #countdown span {
+    font-size: 2rem;
+  }
+}
+
+
+/* Estilos para o Rodapé */
+.rodape {
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: white;
+  padding: 40px 0;
+}
+
+/* Títulos das seções */
+.footer-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Deixa os títulos em maiúsculas */
+}
+
+/* Parágrafos dentro do rodapé */
+.rodape p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Links dentro do rodapé */
+.rodape a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+  color: #ff7f50; /* Cor ao passar o mouse */
+}
+
+/* Estilos para os ícones das redes sociais */
+.social-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ff7f50; /* Cor ao passar o mouse */
+  transform: scale(1.2); /* Aumenta o tamanho dos ícones ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 767px) {
+  .rodape .row {
+    text-align: center;
+  }
+
+  .rodape .col-md-4 {
+    margin-bottom: 30px;
+  }
+
+  .rodape .social-icon {
+    font-size: 1.5rem; /* Tamanho dos ícones em telas menores */
+  }
+}
+
+@media (max-width: 991px) {
+  .rodape .col-md-4 {
+    text-align: center;
+  }
+}
