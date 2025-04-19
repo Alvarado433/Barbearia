@@ -1,6 +1,5 @@
 // next.config.js
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   images: {
     remotePatterns: [
       {
@@ -8,7 +7,7 @@ const nextConfig = {
         hostname: 'placehold.co',
       },
     ],
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
-
-module.exports = nextConfig;
