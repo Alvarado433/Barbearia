@@ -6,12 +6,6 @@ import React, { useState } from "react";
 
 const Menu = () => {
   const [menuAberto, setMenuAberto] = useState(false);
-  const [mostrarMensagem, setMostrarMensagem] = useState(false);
-
-  const agendamento = () => {
-    setMostrarMensagem(true);
-    setTimeout(() => setMostrarMensagem(false), 3000);
-  };
 
   return (
     <header className="topo d-flex align-items-center justify-content-between px-3 py-2">
@@ -36,9 +30,11 @@ const Menu = () => {
 
       {/* Botão de Agendamento (desktop) */}
       <div className="button-agendamento d-none d-md-block">
-        <button onClick={agendamento}>
-          <i className="bi bi-calendar-check-fill me-2"></i>Agendamento
-        </button>
+        <Link href="/agendar">
+          <button>
+            <i className="bi bi-calendar-check-fill me-2"></i>Agendamento
+          </button>
+        </Link>
       </div>
 
       {/* Ícone do Menu Hamburguer (mobile) */}
@@ -57,18 +53,13 @@ const Menu = () => {
             <li><Link href="#servicos" onClick={() => setMenuAberto(false)}><i className="bi bi-scissors me-2"></i>Serviços</Link></li>
             <li><Link href="#promo" onClick={() => setMenuAberto(false)}><i className="bi bi-tags-fill me-2"></i>Promoções</Link></li>
             <li>
-              <button onClick={() => { setMenuAberto(false); agendamento(); }}>
-                <i className="bi bi-calendar-check-fill me-2"></i>Agendamento
-              </button>
+              <Link href="/agendar" onClick={() => setMenuAberto(false)}>
+                <button>
+                  <i className="bi bi-calendar-check-fill me-2"></i>Agendamento
+                </button>
+              </Link>
             </li>
           </ul>
-        </div>
-      )}
-
-      {/* Mensagem de alerta */}
-      {mostrarMensagem && (
-        <div className="alert-info">
-          Agendamento em breve! Fique ligado.
         </div>
       )}
     </header>
