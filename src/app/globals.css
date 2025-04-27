@@ -406,7 +406,6 @@ body {
   color: #ccc;
 }
 
-
 .promocoes {
   background-color: #333333; /* Cor de fundo escura para destacar */
   color: #fff; /* Cor do texto branca para contraste */
@@ -554,7 +553,6 @@ body {
   }
 }
 
-
 /* Estilos para o Rodapé */
 .rodape {
   background-color: #333; /* Cor de fundo do rodapé */
@@ -616,4 +614,14 @@ body {
   .rodape .col-md-4 {
     text-align: center;
   }
+}
+
+/*
+* pagina de agendamento
+*/
+.agendamento {
+  background-color: #f8f9fa; /* Cor de fundo clara */
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 180px;
 }
